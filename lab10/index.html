@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="col-md-3"></div>
+    <div class="col-md-6 well">
+      <hr style="border-top: 1px dotted #ccc" />
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h4>Currency Converter</h4>
+        <hr style="border-top: 1px groovy #ccc" />
+        <div class="form-group">
+          <select
+            onchange="Currency();"
+            class="form-control"
+            id="converter"
+            style="width: 30%"
+          >
+            <option value="Dollar">Dollar</option>
+            <option value="Euro">Euro</option>
+            <option value="Pound">Pound</option>
+            <option value="Won">Won</option>
+            <option value="Yen">Yen</option>
+            <option value="Yuan">Yuan</option>
+          </select>
+          <br />
+          <div class="hansh">
+            <table id="calcu">
+              <tr>
+                <td colspan="3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="value1"
+                    disabled="disabled"
+                    onclick="value11()"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="1"
+                    onclick="dis('1')"
+                    onkeydown="myFunction(event)"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="button"
+                    value="2"
+                    onclick="dis('2')"
+                    onkeydown="myFunction(event)"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="button"
+                    value="3"
+                    onclick="dis('3')"
+                    onkeydown="myFunction(event)"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="4"
+                    onclick="dis('4')"
+                    onkeydown="myFunction(event)"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="button"
+                    value="5"
+                    onclick="dis('5')"
+                    onkeydown="myFunction(event)"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="button"
+                    value="6"
+                    onclick="dis('6')"
+                    onkeydown="myFunction(event)"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="7"
+                    onclick="dis('7')"
+                    onkeydown="myFunction(event)"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="button"
+                    value="8"
+                    onclick="dis('8')"
+                    onkeydown="myFunction(event)"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="button"
+                    value="9"
+                    onclick="dis('9')"
+                    onkeydown="myFunction(event)"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="0"
+                    onclick="dis('0')"
+                    onkeydown="myFunction(event)"
+                  />
+                </td>
+                <td><input type="button" value="C" onclick="clr()" /></td>
+                <td><input type="button" value="ok" onclick="ok()" /></td>
+              </tr>
+            </table>
+            <div class="right">
+              <table id="hansh">
+                <tr>
+                  <td colspan="2"></td>
+                </tr>
+                <tr>
+                  <td><h1>Валют</h1></td>
+                  <td><h1></h1></td>
+                  <td><h1>Ханш</h1></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                    />
+                  </td>
+                  <td><h2>Dollar</h2></td>
+                  <td><h3>2890</h3></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://static.wikia.nocookie.net/the-handmaids-tale/images/0/05/Canadaflag.jpg/revision/latest?cb=20180707211013"
+                    />
+                  </td>
+                  <td><h2>Euro</h2></td>
+                  <td><h3>3120</h3></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://i.natgeofe.com/k/53ffabb7-6e89-4a88-98c9-232ebec8d26e/united-kingdom-flag_16x9.gif"
+                    />
+                  </td>
+                  <td><h2>Pound</h2></td>
+                  <td><h3>3500</h3></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/800px-Flag_of_South_Korea.svg.png"
+                    />
+                  </td>
+                  <td><h2>Won</h2></td>
+                  <td><h3>2.3</h3></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png"
+                    />
+                  </td>
+                  <td><h2>Yen</h2></td>
+                  <td><h3>123</h3></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/640px-Flag_of_the_People%27s_Republic_of_China.svg.png"
+                    />
+                  </td>
+                  <td><h2>Yuan</h2></td>
+                  <td><h3>11</h3></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <div class="form-group">
+          <label>MNT</label>
+          <input
+            type="number"
+            class="form-control"
+            id="value2"
+            disabled="disabled"
+          />
+        </div>
+        <script></script>
+      </div>
+    </div>
+  </body>
+  <script>
+    function Currency() {
+      y = document.getElementById("converter").value;
+      return y;
+    }
+    function dis(val) {
+      document.getElementById("value1").value += val;
+    }
+    function clr() {
+      document.getElementById("value1").value = "";
+    }
+
+    function ok() {
+      y = Currency();
+
+      x = document.getElementById("value1").value;
+
+      if (x == "") {
+        document.getElementById("value2").value = "";
+      } else {
+        switch (y) {
+          case "Dollar":
+            document.getElementById("value2").value = x * 2890;
+            break;
+
+          case "Pound":
+            document.getElementById("value2").value = x * 3500;
+            break;
+
+          case "Euro":
+            document.getElementById("value2").value = x * 3120;
+            break;
+
+          case "Won":
+            document.getElementById("value2").value = x * 2.3;
+            break;
+
+          case "Yen":
+            document.getElementById("value2").value = x * 123;
+            break;
+
+          case "Yuan":
+            document.getElementById("value2").value = x * 11;
+            break;
+        }
+      }
+    }
+  </script>
+</html>
